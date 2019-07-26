@@ -9,9 +9,11 @@
 </head>
 <body>
     <div class="signup-container">
+
         <div class="account-left">
          <h1>Account Left</h1>
         </div>
+
         <div class="account-right">
             <div class="form-area">
                 <form action="" method="POST">
@@ -26,7 +28,6 @@
                     <label for="file" id="file-label"> Choose image</label>
                     <input type="file" name="img" class="file" id="file"></div>
                     <div class="group">
- 
                     <input type="submit" name="signup" class="btn signup-btn" value="Submit"></div>
                 </form>
             </div>
