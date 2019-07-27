@@ -12,7 +12,7 @@
 
         <div class="account-left">
         <div class="account-text">
-        <h1>Lets Chat</h1>
+        <h1>Lets Chat</h1> 
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, rerum iure, suscipit illum pariatur quod minus libero explicabo commodi, ipsum dolores excepturi facilis. Inventore iste, suscipit voluptates delectus eos blanditiis omnis hic tempora sit accusamus maiores nemo. Saepe tempora, aspernatur porro delectus similique veritatis possimus quasi mollitia reprehenderit iste velit? Omnis repudiandae voluptates excepturi dicta vel. Pariatur laboriosam exercitationem inventore nam quisquam, unde deserunt expedita doloribus. Quam nam iusto saepe eaque unde dolor, velit nihil ea aliquam aliquid non voluptatum facere consequuntur, inventore at officiis totam. Distinctio cumque aliquam molestias dolores sit corrupti consequatur eos, omnis eligendi voluptatem, eum saepe.
             </p> 
@@ -22,25 +22,18 @@
         <div class="account-right">
             <div class="form-area">
                 <form action="" method="POST">
-                <h2 class="form-heading">User Signup</h2>
+                     <h2 class="form-heading">User Login</h2>
 
-                    <div class="group">
-                    <input type="text" name="full_name" class="control" placeholder="Enter your name"></div>
                     <div class="group">
                     <input type="email" name="email" class="control" placeholder="Enter your email"></div>
                     <div class="group">
                     <input type="password" name="password" class="control" placeholder="Enter your password"></div>
 
                     <div class="group">
-                    <label for="file" id="file-label"> Choose image</label>
-                    <input type="file" name="img" class="file" id="file">
-                    <p class="filename"></p>
-                   </div>
-                   <div class="group">
                     <input type="submit" name="login" class="btn account-btn" value="User Account">
                    </div>
                     <div class="group">
-                    <a href="login.php" class="link">Already have account?</a>
+                    <a href="signup.php" class="link">Create new account?</a>
                       </div>
                 </form>
             </div>
