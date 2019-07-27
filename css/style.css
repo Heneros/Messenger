@@ -6,6 +6,7 @@
 }
 html {
     font-size: 10px;
+    font-weight: 400;
 }
 body {
     font-family: sans-serif;
@@ -56,10 +57,31 @@ body {
 .file {
     display: none;
 }
-
+ 
 #file-label {
     display: block;
     width: 100%;
     padding: 1.1rem 1rem;
     border: 1px solid var(--color-silver);
+    border-radius: 3px;
+    font-size: 1.2rem;
 }
+/* 
+#file-label:hover {
+    cursor: pointer;
+}
+
+
+.btn {
+    display: block;
+    padding: 1.2rem .9rem;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    border: 0px;
+}
+.account-btn {
+    width: 100%;
+    background: linear-gradient(to right, var(--color-green-light), var(--color-green-dark))
+}
+ */

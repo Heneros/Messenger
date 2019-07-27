@@ -26,12 +26,17 @@
 
                     <div class="group">
                     <label for="file" id="file-label"> Choose image</label>
-                    <input type="file" name="img" class="file" id="file"></div>
+                    <input type="file" name="img" class="file" id="file">
+                    <p class="filename"></p>
+                   </div>
                     <div class="group">
-                    <input type="submit" name="signup" class="btn signup-btn" value="Submit"></div>
+                    <input type="submit" name="signup" class="btn account-btn" value="Submit"></div>
+ 
                 </form>
             </div>
-        </div>
+        </div> 
     </div>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+ <script src="js/main.js"></script>
+</body> 
 </html>
