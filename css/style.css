@@ -318,14 +318,60 @@ body {
     margin-bottom: .3rem;
     margin-top: 0.7rem;
 }
-.chat-form {
-    width: 100%;
-    height: 15vh;
-    background-color: black;
-}
 .right-time {
     display: block;
     text-align: right;
+}
+
+.chat-form {
+    width: 100%;
+    height: 10vh;
+    border-top: 1px var(--color-silver-3);
+}
+
+.chat-container {
+    display: flex;
+}
+.form-input {
+    width: 50%;
+    border:0;
+    padding: 1rem 2rem;
+    height: 5rem;
+}
+.textarea-control {
+    width: 100%;
+    border: 0;
+    padding: 1rem 2rem;
+    height: 5rem;
+    resize: none;
+    margin-left: .5rem;
+}
+.textarea-control:focus {
+    outline: none;
+}
+.files-upload {
+    display: none;
+}
+#upload-label {
+    width: 100%;
+    height: 5rem;
+    line-height: 3rem;
+    text-align: center;
+    display: block;
+}
+#upload-label:hover {
+    cursor: pointer;
+}
+.fa-uploads {
+    font-size: 1.8rem;
+    margin-left: 1.2rem;
+    color: var(--color-silver-4);
+}
+
+::-webkit-input-placeholder {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 /*Design Custom Scroll bar*/

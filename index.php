@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet" >
+     <!-- <link rel="stylesheet" href="css/fontawesome.min.css"> -->
     <title>Messenger</title>
 </head>
 <body>
@@ -22,11 +24,15 @@
     </section>
     <section id="right-area">
      <div class="messages">
+
     <div class="left-message common-margin">
+
     <div class="sender-img-block">
     <img src="img/bender.jpg" class="sender-img" alt="sender image">
     </div>
+
     <div class="left-msg-area">
+
         <div class="user-name-date">
             <span class="sender-name">
             Bender Rodriguez 
@@ -39,9 +45,33 @@
          <div class="left-msg">
              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates molestiae expedita sed!</p>
          </div>
+         
        </div>
-       
+
     </div>
+
+    <div class="left-message common-margin">
+    <div class="sender-img-block">
+    <img src="img/bender.jpg" class="sender-img" alt="sender image">
+    </div>
+
+    <div class="left-msg-area">
+
+        <div class="user-name-date">
+            <span class="sender-name">
+            Bender Rodriguez 
+            </span>
+            <span class="date-time">
+                1 day ago
+            </span>
+         </div>
+         
+         <div class="left-msg">
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates molestiae expedita sed!</p>
+         </div>
+       </div> <!--  sender-img-block-->
+       </div> <!--  left-message common-margin -->
+
     <div class="left-message common-margin">
     <div class="sender-img-block">
     <img src="img/bender.jpg" class="sender-img" alt="sender image">
@@ -159,11 +189,21 @@
  </div>
  
     <div class="chat-form">
-    chat form
-    </div>
-    </section>
+      <div class="chat-container">
+          <div class="form-input">
+              <textarea placeholder="Type your message..." class="textarea-control"></textarea>
+          </div><!-- close form-input -->
+          <div class="form-input">
+              <label for="upload-files" id="upload-label"><i class="fas fa-paperclip fa-uploads"></i><i class="fas fa-file-image fa-uploads"></i></label>
+             <input type="file" 
+             id="upload-files"
+             class="files-upload" >
+          </div><!-- form-input close -->
+      </div> <!-- chat-container close --> 
+    </div><!-- chat-form close -->
+    </section> <!-- close right area close -->
 </div>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
 </body>
 </html>
