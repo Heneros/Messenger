@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+
     <title>Messenger</title>
+    <?php include 'components/nav.php' ;?>
 </head>
 <body>
     <div class="signup-container">
@@ -20,26 +21,10 @@
         </div>
 
         <div class="account-right">
-            <div class="form-area">
-                <form action="" method="POST">
-                     <h2 class="form-heading">User Login</h2>
+        <script src="js/login.js"></script>
 
-                    <div class="group">
-                    <input type="email" name="email" class="control" placeholder="Enter your email"></div>
-                    <div class="group">
-                    <input type="password" name="password" class="control" placeholder="Enter your password"></div>
-
-                    <div class="group">
-                    <input type="submit" name="login" class="btn account-btn" value="User Account">
-                   </div>
-                    <div class="group">
-                    <a href="signup.php" class="link">Create new account?</a>
-                      </div>
-                </form>
-            </div>
         </div> 
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
- <script src="js/main.js"></script>
+   <?php include 'components/js.php' ;?>
 </body> 
 </html>

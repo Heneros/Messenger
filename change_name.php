@@ -4,26 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-    <?php include 'components/css.php'; ?>
+    <?php include 'components/css.php' ;?>
+    <title>Messenger</title>
 </head>
 <body>
 <?php include 'components/nav.php'; ?>
-
 <div class="chat-container">
 <?php include 'components/sidebar.php'; ?>
+
     <section id="right-area">
-     <div class="messages">
-
-     <?php include 'components/messages.php'; ?>
-     <?php include 'components/chat_form.php'; ?>
-     <?php include 'components/emoji.php'; ?>
-
-
+    <?php include 'components/change_name.php'; ?>
     </section> <!-- close right area close -->
 </div> <!--close chat-container -->
+
 <?php include 'components/js.php'; ?>
-
-
 </body>
 </html>

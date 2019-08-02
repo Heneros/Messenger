@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
     <title>Messenger</title>
+    <?php include 'components/css.php'; ?>
 </head>
 <body>
     <div class="signup-container">
@@ -20,33 +20,11 @@
         </div>
 
         <div class="account-right">
-            <div class="form-area">
-                <form action="" method="POST">
-                <h2 class="form-heading">User Signup</h2>
+        <?php include 'components/signup.php'; ?>
 
-                    <div class="group">
-                    <input type="text" name="full_name" class="control" placeholder="Enter your name"></div>
-                    <div class="group">
-                    <input type="email" name="email" class="control" placeholder="Enter your email"></div>
-                    <div class="group">
-                    <input type="password" name="password" class="control" placeholder="Enter your password"></div>
-
-                    <div class="group">
-                    <label for="file" id="file-label"> Choose image</label>
-                    <input type="file" name="img" class="file" id="file">
-                    <p class="filename"></p>
-                   </div>
-                   <div class="group">
-                    <input type="submit" name="login" class="btn account-btn" value="User Account">
-                   </div>
-                    <div class="group">
-                    <a href="login.php" class="link">Already have account?</a>
-                      </div>
-                </form>
-            </div>
         </div> 
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+    <?php include 'components/signup.php'; ?>
  <script src="js/main.js"></script>
 </body> 
 </html>

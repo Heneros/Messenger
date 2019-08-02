@@ -122,6 +122,7 @@ body {
     height: 10vh;
     background: linear-gradient(to right, var(--color-green-light), var(--color-green-dark));
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0, .5);
+    position: relative;
 }
 .chat-container {
     display: flex;
@@ -241,21 +242,23 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 1rem;
-    height: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
     background-color: var(--color-green-dark);
     display: block;
     border-radius: 50%;
+    border: 2px solid #fff;
 } 
 .offline-icon {
     position: absolute;
     top: 0;
     right: 0;
-    width: 1rem;
-    height: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
     background-color: red;
     display: block;   
     border-radius: 50%;
+    border: 2px solid #fff;
 } 
 .left-msg-area {
     margin-left: 2rem;
@@ -301,10 +304,11 @@ body {
 .right-messages {
     display: flex;
     justify-content: flex-end;
+
 }
 .right-msg-area {
-  max-width: 50%;
-  width: auto;
+    max-width: 50%;
+    width: auto;
 }
 .right-msg {
     font-size: 1.5rem;
@@ -373,6 +377,20 @@ body {
     font-weight: 300;
     letter-spacing: 2px;
 }
+/*Emoji section */
+.emoji {
+    height: 5vh;
+    width: 100%;
+}
+.emoji-same {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
+.emoji-same:hover {
+  cursor: pointer
+}
+
 
 /*Design Custom Scroll bar*/
 
@@ -385,12 +403,72 @@ body {
     background-color: #888;
     border-radius: 1rem;
 }
+.form-section {
+    padding: 3rem;
+}
+
+.form-grid {
+    width: 35%;
+}
+.custom-bars {
+    float: right;
+    font-size: 1.8rem;
+    color: #fff;
+}
+.custom-bars {
+    position: absolute;
+    float: right;
+    font-size: 1.8rem;
+    color: #fff;
+    right: 3rem;
+    top: 33%;
+}
+.custom-bars:hover {
+    cursor: pointer;
+}
+.bars {
+    display: none;
+}
 
 @media (max-width: 765px) {
     .account-left {
         display: none;
     }
     .account-right {
+        width: 100%;
+    }
+    .chat-container {
+        flex-wrap: wrap;
+    }
+    .bars {
+        display: block;
+    }
+    #sidebar {
+        width: 100%;
+        display: none;
+    }
+    #right-area {
+        width: 100%;
+    }
+    #sidebar::before {
+        width: 30%;
+    }
+    .left-message {
+        max-width: 100%;
+        width: auto;
+    }
+    .right-msg-area {
+        max-width: 90%;
+        width: auto;
+    }
+    .messages {
+        height: 70vh;
+    }
+    ::-webkit-scrollbar {
+        font-size: .9rem;
+        color: black;
+    }
+    .form-grid {
         width: 100%;
     }
 }
