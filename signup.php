@@ -2,10 +2,24 @@
 
 include "init.php";
 
-$db = new db();
+if(isset($_POST['signup']))
+{
+$full_name = $_POST['full_name'];
+$email = $_POST['email'];
+$password = $_POST['password'];
+$img_name = $_FILES['img']['name'];
+$img_tmp = $_FILES['img']['tmp_name'];
+$name_status = $email_status = $password_status = $photo_status = 1;
+if(empty($full_name)){
+    $name_error = "Full name is required!";
+    $name_status = "";
+    
+}
 
+}
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +43,8 @@ $db = new db();
         </div>
 
         <div class="account-right">
-        <?php include 'components/signup.php'; ?>
+         <?php include 'components/signup.php'; ?> 
+        
 </div>
 
         </div> 

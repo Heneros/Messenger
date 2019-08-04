@@ -429,6 +429,15 @@ body {
 .bars {
     display: none;
 }
+/*Errors in form*/
+
+.errors {
+  color:red;
+  text-align: left;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
 
 @media (max-width: 765px) {
     .account-left {
