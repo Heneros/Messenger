@@ -21,4 +21,4 @@
                     <a href="login.php" class="link">Already have account?</a>
                       </div>
                 </form>
-            </div>
+            </div>   

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Messenger</title>
-    <?php include 'components/nav.php' ;?>
+    <?php include 'components/css.php' ;?>
 </head>
 <body>
     <div class="signup-container">
@@ -21,7 +21,8 @@
         </div>
 
         <div class="account-right">
-        <script src="js/login.js"></script>
+        <?php include 'components/login.php' ;?>
+
 
         </div> 
     </div>

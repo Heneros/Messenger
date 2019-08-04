@@ -1,14 +1,23 @@
+<?php
+
+include "init.php";
+
+$db = new db();
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
     <title>Messenger</title>
     <?php include 'components/css.php'; ?>
 </head>
 <body>
     <div class="signup-container">
+
 
         <div class="account-left">
         <div class="account-text">
@@ -21,10 +30,9 @@
 
         <div class="account-right">
         <?php include 'components/signup.php'; ?>
+</div>
 
         </div> 
-    </div>
-    <?php include 'components/signup.php'; ?>
- <script src="js/main.js"></script>
+    <?php include 'components/js.php'; ?>
 </body> 
 </html>
