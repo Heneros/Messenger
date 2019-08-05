@@ -22,6 +22,12 @@
                     </div>
                     <div class="group">
                     <input type="password" name="password" class="control" placeholder="Enter your password">
+                    <div class="name-error error">
+                    <?php if(isset($password_error)):?>
+                    <?php echo $password_error; ?>
+
+                    <?php  endif; ?>
+                    </div><!--- close name-error block -->
                     </div>
                     <div class="group">
                     <label for="file" id="file-label"> Choose image</label>

@@ -16,6 +16,7 @@ if(empty($full_name)){
     $name_status = "";
     
 }
+// Email Validation
 if(empty($email)){
     $email_error = "Email is required";
     $email_status = "";
@@ -34,6 +35,15 @@ if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
     }
   }
 }
+// Email Validation
+if(empty($password)){
+    $password_error = "Password is required ";
+    $password_status = "";
+}else if(strlen($password) < 5 ) {
+    $password_error = "Password is too short ";
+    $password_status = "";
+}
+
 }
 ?>
 

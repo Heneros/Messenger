@@ -13,7 +13,6 @@ class db    {
     {
      try {
          $this->con = new PDO("mysql:hosts=" . $this->host . ";dbname=". $this->dbname,$this->username, $this->password );
-         echo "connection is successfully created";
      } catch (Exception $e){
       echo "Database Connection Problem: " . $e->getMessage();
      }
