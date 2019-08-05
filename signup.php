@@ -10,6 +10,11 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $img_name = $_FILES['img']['name'];
 $img_tmp = $_FILES['img']['tmp_name'];
+$img_path = "img/";
+$extensions = ['jpg', 'jpeg', 'png'];
+$img_ext = explode(".", $img_name);
+$img_extension = end($img_ext);
+
 $name_status = $email_status = $password_status = $photo_status = 1;
 if(empty($full_name)){
     $name_error = "Full name is required!";
@@ -43,7 +48,24 @@ if(empty($password)){
     $password_error = "Password is too short ";
     $password_status = "";
 }
+// Image Validation
 
+if(empty($img_name)){
+    $image_error = "Image is required";
+    $photo_status = "";
+}else if(!in_array($img_extension, $extensions)){
+    $image_error = "Inavalid image extension";
+    $photo_status = "";
+}
+
+
+if(!empty($name_status) && !empty($email_status) && !empty($password_status) && !empty($photo_status)){
+    move_uploaded_file($img_tmp, "$img_path/$img_name");
+    $status = 0;
+    if($obj->Normal_Query("INSERT INTO users (name, email, password, image, status ) VALUES (?, ?, ?, ?, ?)", [$full_name, $email, password_hash($password, PASSWORD_DEFAULT), $img_name, $status])){
+        echo "successfully";
+    }
+}
 }
 ?>
 
