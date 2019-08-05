@@ -1,6 +1,7 @@
 <?php
 
 include "init.php";
+$obj = new base_class();
 
 if(isset($_POST['signup']))
 {
@@ -15,9 +16,25 @@ if(empty($full_name)){
     $name_status = "";
     
 }
-
+if(empty($email)){
+    $email_error = "Email is required";
+    $email_status = "";
+} else {
+if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+    $email_error = "Invalid email format";
+    $email_status = "";
+}else {
+    if($obj->Normal_Query("SELECT email FROM users WHERE email = ?", array($email))){
+        if($obj->Count_Rows() == 0){
+            
+        }else {
+            $email_error = "Sorry this email is exist";
+            $email_status = "";
+        }
+    }
+  }
 }
-
+}
 ?>
 
 <!DOCTYPE html>
@@ -43,11 +60,12 @@ if(empty($full_name)){
         </div>
 
         <div class="account-right">
-         <?php include 'components/signup.php'; ?> 
+         <?php include 'components/signup_form.php'; ?> 
         
 </div>
 
         </div> 
     <?php include 'components/js.php'; ?>
-</body> 
-</html>
+      
+    </body>
+  </html>

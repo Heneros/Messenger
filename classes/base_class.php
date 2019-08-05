@@ -13,7 +13,8 @@ class base_class extends db {
         $this->Query = $this->con->prepare();
 
     } else { 
-      $this->Query = $this->con->prepare($query);return $this->Query->execute($param);  
+      $this->Query = $this->con->prepare($query);
+      return $this->Query->execute($param);  
     }
 }
     public function Count_Rows(){

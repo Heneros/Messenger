@@ -431,7 +431,7 @@ body {
 }
 /*Errors in form*/
 
-.errors {
+.error {
   color:red;
   text-align: left;
   font-size: 1.2rem;
