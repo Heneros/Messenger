@@ -437,7 +437,23 @@ body {
   font-size: 1.2rem;
   margin-top: 5px;
 }
+/* Alert form */
+.alert {
+    width: 100%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 0 1rem;
+    font-size: 1.2rem;
 
+}
+.alert-success {
+    background-color: var(--color-green);
+    color: #fff;
+}
 
 @media (max-width: 765px) {
     .account-left {

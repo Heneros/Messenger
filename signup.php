@@ -5,9 +5,9 @@ $obj = new base_class();
 
 if(isset($_POST['signup']))
 {
-$full_name = $_POST['full_name'];
-$email = $_POST['email'];
-$password = $_POST['password'];
+$full_name = $obj->security($_POST['full_name']);
+$email = $obj->security($_POST['email']);
+$password = $obj->security($_POST['password']);
 $img_name = $_FILES['img']['name'];
 $img_tmp = $_FILES['img']['tmp_name'];
 $img_path = "img/";
@@ -32,7 +32,6 @@ if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
 }else {
     if($obj->Normal_Query("SELECT email FROM users WHERE email = ?", array($email))){
         if($obj->Count_Rows() == 0){
-            
         }else {
             $email_error = "Sorry this email is exist";
             $email_status = "";
@@ -40,7 +39,7 @@ if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
     }
   }
 }
-// Email Validation
+// Password Validation
 if(empty($password)){
     $password_error = "Password is required ";
     $password_status = "";
@@ -63,7 +62,8 @@ if(!empty($name_status) && !empty($email_status) && !empty($password_status) && 
     move_uploaded_file($img_tmp, "$img_path/$img_name");
     $status = 0;
     if($obj->Normal_Query("INSERT INTO users (name, email, password, image, status ) VALUES (?, ?, ?, ?, ?)", [$full_name, $email, password_hash($password, PASSWORD_DEFAULT), $img_name, $status])){
-        echo "successfully";
+        $obj->Create_Session("account_success", "Your account is successfully created" );
+        header("location:login.php");
     }
 }
 }
