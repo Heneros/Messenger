@@ -1,3 +1,7 @@
+﻿<?php include "init.php"; ?>
+<?php if(!isset($_SESSION['user_id'])):?>
+<?php header("location:login.php");?>
+<?php endif; ?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
