@@ -1,17 +1,13 @@
 <?php
-
-
 class base_class extends db {
    
     private $Query;
-
     public function Normal_Query ($query, $param = null) 
     {
         if(is_null($param))
         {
         return $this->Qyery->execute();
         $this->Query = $this->con->prepare();
-
     } else { 
       $this->Query = $this->con->prepare($query);
       return $this->Query->execute($param);  
@@ -20,7 +16,6 @@ class base_class extends db {
     public function Count_Rows(){
         return $this->Query->rowCount();
     }
-
     public function fetch_all() {
         return $this->Query->fetch_all(PDO::FETCH_OBJ);
     }
@@ -34,14 +29,6 @@ class base_class extends db {
         return $this->Query->fetch(PDO::FETCH_OBJ);
     }
 }
-
-
-
-
-
-
-
-
 
 
 ?>

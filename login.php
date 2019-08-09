@@ -1,7 +1,7 @@
-<?php include "init.php"; ?>
 <?php
 
-$obj = new base_class();
+include "init.php";
+ $obj = new base_class();
 
 if(isset($_POST['login']))
 {
@@ -43,8 +43,6 @@ if(!empty($email_status) && !empty($password_status)){
 }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
