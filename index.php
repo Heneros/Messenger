@@ -12,6 +12,7 @@
     <?php include 'components/css.php'; ?>
 </head>
 <body>
+    <!--Password update-->
     <?php if(isset($_SESSION['password_updated'])): ?>
     <div class="flash success-flash">
     <span class="remove">&times;</span>
@@ -23,6 +24,19 @@
     </div>
 <?php endif; ?>
 <?php unset($_SESSION['password_updated']); ?>
+</div>
+<!--Name update-->
+<?php if(isset($_SESSION['name_updated'])): ?>
+    <div class="flash success-flash">
+    <span class="remove">&times;</span>
+    <div class="flash-heading">
+        <h3><span class="checked">&#10004;</span>Successs: you have done!</h3>
+    </div>
+    <div class="flash-body">
+    <p><?php echo $_SESSION['name_updated'];?></p>
+    </div>
+<?php endif; ?>
+<?php unset($_SESSION['name_updated']); ?>
 </div>
  <!--close flash-->
 <!-- <div class="flash error-flash">
