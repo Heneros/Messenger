@@ -5,6 +5,7 @@
 
                     <div class="group">
                     <input type="password" name="current_password" class="control" placeholder="Add current password">
+                    
                 </div>
 
                 <div class="group">
