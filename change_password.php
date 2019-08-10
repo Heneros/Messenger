@@ -34,7 +34,8 @@ if(isset($_POST['change_password'])){
             $db_password = $row->password;
             if(password_verify($current_password, $db_password)){
                 if($obj->Normal_Query("UPDATE users SET password = ? WHERE id = ?", [password_hash($new_password, PASSWORD_DEFAULT), $user_id])){
-                echo "pasword is changed";
+                $obj->Create_Session("password_updated", "Your password is successfully updated");
+                header("location:index.php");
                 }else {
                     $current_password_error = "Please enter the correct password";
                 }
