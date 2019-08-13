@@ -39,6 +39,20 @@
 <?php unset($_SESSION['name_updated']); ?>
 </div>
  <!--close flash-->
+    <!--Password update-->
+    <?php if(isset($_SESSION['update_image'])): ?>
+    <div class="flash success-flash">
+    <span class="remove">&times;</span>
+    <div class="flash-heading">
+        <h3><span class="checked">&#10004;</span>Successs: you have done!</h3>
+    </div>
+    <div class="flash-body">
+    <p><?php echo $_SESSION['update_image'];?></p>
+    </div>
+<?php endif; ?>
+<?php unset($_SESSION['update_image']); ?>
+</div>
+ <!--close flash-->
 <!-- <div class="flash error-flash">
     <span class="remove">&times;</span>
     <div class="flash-heading">
