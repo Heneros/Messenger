@@ -1,6 +1,7 @@
 <?php
 
 include "init.php";
+
  $obj = new base_class();
 
 if(isset($_POST['login']))
@@ -56,6 +57,18 @@ if(!empty($email_status) && !empty($password_status)){
     <?php include 'components/css.php' ;?>
 </head>
 <body>
+<?php if(isset($_SESSION['security'])):?>
+<div class="flash error-flash">
+    <span class="remove">&times;</span>
+    <div class="flash-heading">
+        <h3><span class="cross">&#x2715;</span>Error: you have error!</h3>
+    </div>
+    <div class="flash-body">
+    <p><?php echo $_SESSION['security'];?></p>
+    </div>
+</div>
+<?php endif;?>
+<?php unset($_SESSION['security']);?>
     <div class="signup-container">
 
         <div class="account-left">
