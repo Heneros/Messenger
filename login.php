@@ -33,6 +33,8 @@ if(!empty($email_status) && !empty($password_status)){
             $user_image  = $row->image;
 
             if(password_verify($password, $db_password)){
+              $status = 1;
+              $obj->Normal_Query("UPDATE users SET status = ? WHERE id = ?", [$status, $user_id]);
               $obj->Create_Session("user_name", $user_name);
               $obj->Create_Session("user_id", $user_id);
               $obj->Create_Session("user_image", $user_image);
