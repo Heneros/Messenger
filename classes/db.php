@@ -5,7 +5,7 @@ class db    {
     private $username = "root";
     private $password = "";
 
-    protected $con;
+    public $con;
 
     public function __construct()
     {
