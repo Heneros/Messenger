@@ -68,3 +68,20 @@ $(document).ready(function(){
     })
 })
 
+
+/// Show messages from db 
+
+function show_messages(){
+    var msg = true;
+
+    $.ajax({
+        type: 'GET', 
+        url: 'ajax/show_messages.php',
+        data: {'message': msg},
+
+        success: function(feedback){
+        $(".messages").html(feedback);
+        }
+    })
+}
+show_messages();

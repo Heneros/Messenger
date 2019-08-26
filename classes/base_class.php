@@ -6,7 +6,7 @@ class base_class extends db {
     {
         if(is_null($param))
         {
-        return $this->Qyery->execute();
+        return $this->Query->execute();
         $this->Query = $this->con->prepare();
     } else { 
       $this->Query = $this->con->prepare($query);
