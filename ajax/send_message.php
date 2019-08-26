@@ -2,7 +2,6 @@
 include "../init.php";
 
 
-$obj = new base_class();
 $con = mysqli_connect("127.0.0.1", "root", "", "messenger");
 
 if (isset($_POST['message'])) {
@@ -11,11 +10,10 @@ if (isset($_POST['message'])) {
     $msg_type = "text";
     $user_id = $_SESSION['user_id'];
     
-    $sql = mysqli_query($con, "INSERT INTO messages(message, msg_type, user_id) VALUES ('$message', '$msg_type', '$user_id')");
-    // $sql = mysqli_query($con, "SELECT message,user_id FROM messages order by id desc");
-    // $result = mysqli_fetch_array($sql);
-    // echo  $result['message'] ;
+   if($sql = mysqli_query($con, "INSERT INTO messages(message, msg_type, user_id) VALUES ('$message', '$msg_type', '$user_id')")) {
     echo json_encode(['status' => 'success']);
+   }
+
 } else {
     echo "Message is empty";
 }

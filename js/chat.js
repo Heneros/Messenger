@@ -1,24 +1,52 @@
+// $(document).on("click", "#save", function () {
+//     var message = $("#send_message").val();
+//     if (message == "") {
+//         $("#error_message").html("Please enter message");
+//         return false;
+//     } else {
+//         $("#error_message").html("");
+//     }
+//     $.ajax({
+//         type: "POST",
+//         url: 'ajax/send_message.php',
+//         data: {message: message},
+//         cache: false,
+//         success: function (data) {
+//             alert(data);
+//             $("#message").val("");
+//         }
+//     });
+// });
 
-
-$(document).on("click", "#save", function () {
-    var message = $("#send_message").val();
+$(document).ready(function(){
+    $(".chat-form").keypress(function(e){
+        if(e.keyCode == 13) {
+            var message = $("#send_message").val();
     if (message == "") {
         $("#error_message").html("Please enter message");
         return false;
     } else {
         $("#error_message").html("");
     }
-    $.ajax({
-        type: "POST",
-        url: 'ajax/send_message.php',
-        data: {message: message},
-        cache: false,
-        success: function (data) {
-            alert(data);
-            $("#message").val("");
+                  $.ajax({
+                    type: 'POST',
+                    url: 'ajax/send_message.php',
+                    data: {message: message},
+                    dataType: 'JSON',
+                    cache: false,
+                    success: function(feedback){
+                        if(feedback.status == "success"){
+                            alert('message is sent');
+                            $("#send_message").val("");
+                        }
+                    },
+                    error: function(error){
+                        console.log(error);
+                    }
+                })
         }
-    });
-});
+    })
+})
 
 // $(document).ready(function(){
 //     $(".chat-form").keypress(function(e){
